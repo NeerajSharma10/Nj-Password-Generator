@@ -83,8 +83,8 @@ const Midbar = ({valueVariable, isNumberEnabledVarible, isCharacterEnabledVariab
     },[valueVariable, isNumberEnabledVarible, isCharacterEnabledVariable])
     return (
         <div className="w-100 h-1/2  flex justify-center items-center">
-            <input type="text" className="text-gray-400  font-medium focus:outline-none w-4/5 h-10 rounded-l-lg pl-3" value={password} />
-            <button  onClick={handleCopy} className="text-gray-200 bg-indigo-600 w-20 h-10 rounded-r-lg">COPY</button>
+            <input type="text" className="text-xs md:text-lg text-gray-400  font-medium focus:outline-none w-4/5 h-10 rounded-l-lg pl-3" value={password} />
+            <button  onClick={handleCopy} className="text-sm md:text-lg text-gray-200 bg-indigo-600 w-20 h-10 rounded-r-lg">COPY</button>
         </div>
     )
 }

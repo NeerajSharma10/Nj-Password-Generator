@@ -25,7 +25,7 @@ function App() {
       <div className="w-1/2 h-1/3 bg-fuchsia-950 mt-10">
         <div className="w-100 h-1/2  flex justify-center items-center">
           <div className="w-1/1 h-1/3  flex justify-center items-center">
-            <div className="w-100 h-1/1 text-3xl	text-gray-200 font-extrabold">PASSWORD-GENERATOR</div>
+            <div className="w-100 h-1/1 text-base  md:text-3xl	text-gray-200 font-extrabold">PASSWORD-GENERATOR</div>
           </div>
         </div>
         <div className="w-100 h-1/2 bg-pink-950">
@@ -47,30 +47,30 @@ function App() {
               </div>
             </div>
             <div className="w-1/5 h-1/2 text-gray-200 font-semibold flex justify-center items-center">
-              <div>Length: {value}</div>
+              <div className="text-xs md:text-lg">Length: {value}</div>
             </div>
             {/* <Checkbox /> */}
             <div className="flex items-center">
               <input
                 type="checkbox"
-                className="form-checkbox h-5 w-5 text-indigo-600"
+                className="form-checkbox h-3 w-3 md:h-5 md:w-5 text-indigo-600"
                 checked={isNumberEnabled}
                 onChange={handleCheckBoxChange}
               />
               {/* <span className="ml-2">{label}</span> */}
             </div>
-            <div className="w-2/12 h-1/2 text-gray-200 flex font-semibold items-center">Numbers</div>
+            <div className="text-xs md:text-lg w-2/12 h-1/2 text-gray-200 flex font-semibold items-center">Numbers</div>
             {/* <Checkbox /> */}
             <div className="flex items-center">
               <input
                 type="checkbox"
-                className="form-checkbox h-5 w-5 text-indigo-600"
+                className="form-checkbox h-3 w-3 md:h-5 md:w-5 text-indigo-600"
                 checked={isCharacterEnabled}
                 onChange={handleCheckBoxChangeForCharacter}
               />
               {/* <span className="ml-2">{label}</span> */}
             </div>
-            <div className="w-1/5 h-1/2 font-semibold text-gray-200 flex  items-center">Characters</div>
+            <div className="text-xs md:text-lg w-1/5 h-1/2 font-semibold text-gray-200 flex  items-center">Characters</div>
           </div>
         </div>
       </div>
