@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="w-screen h-screen bg-blue-950	 flex justify-center ">
 
-      <div className="w-1/2 h-1/3 bg-fuchsia-950 mt-10">
+      <div className="w-4/5 h-1/2 md:w-1/2 md:h-1/3 bg-fuchsia-950 mt-10">
         <div className="w-100 h-1/2  flex justify-center items-center">
           <div className="w-1/1 h-1/3  flex justify-center items-center">
             <div className="w-100 h-1/1 text-base  md:text-3xl	text-gray-200 font-extrabold">PASSWORD-GENERATOR</div>
