@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState , useRef} from 'react'
 
 const Midbar = ({valueVariable, isNumberEnabledVarible, isCharacterEnabledVariable}) => {
     const [password, setPassword] = useState('wDqLsdEoZf');
+    const inputRef = useRef(null);
     // const [textToCopy, setTextToCopy] = useState('Text to copy');
 
     const handleCopy = () => {
         navigator.clipboard.writeText(password)
-        .then(() => alert('Text copied to clipboard: ' + password))
+        .then(() => {
+            inputRef.current.focus();
+            inputRef.current.select();
+        })
         .catch((error) => console.error('Error copying text: ', error));
     };
 
@@ -83,8 +87,16 @@ const Midbar = ({valueVariable, isNumberEnabledVarible, isCharacterEnabledVariab
     },[valueVariable, isNumberEnabledVarible, isCharacterEnabledVariable])
     return (
         <div className="w-100 h-1/2  flex justify-center items-center">
-            <input type="text" className="text-xs md:text-lg text-gray-400  font-medium focus:outline-none w-4/5 h-10 rounded-l-lg pl-3" value={password} />
+            <input ref = {inputRef} type="text" className="text-xs md:text-lg text-gray-400  font-medium focus:outline-none w-4/5 h-10 rounded-l-lg pl-3" value={password} />
             <button  onClick={handleCopy} className="text-sm md:text-lg text-gray-200 bg-indigo-600 w-20 h-10 rounded-r-lg">COPY</button>
+            <style>
+                {`
+                    input::selection {
+                        background-color: #BCD6D4 ; /* Yellow */
+                        color: #000; /* Black */
+                    }
+                `}
+            </style>
         </div>
     )
 }
